@@ -1,0 +1,30 @@
+post http://localhost:3000/api/blockchain
+Content-Type: application/json
+
+{
+    "id":6,
+    "name":"miler four",
+    "genesis": {
+        "date": "21/1/2022",
+        "transaction": {
+            "sender": "miler",
+            "reciever":"bass",
+            "amount":2
+        }
+    }
+}
+
+###
+post http://localhost:3000/api/blockchain/append
+Content-Type: application/json
+
+{
+        "transaction": {
+            "sender": "miler",
+            "reciever":"bass",
+            "amount":200
+        },
+        "timestamp":"21/1/2022"
+}
+###
+get http://localhost:3000/api/blockchain
